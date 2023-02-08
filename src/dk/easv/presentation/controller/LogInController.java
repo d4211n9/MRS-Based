@@ -30,9 +30,10 @@ public class LogInController implements Initializable {
     public void logIn(ActionEvent actionEvent) {
         model.loadUsers();
         model.loginUserFromUsername(userId.getText());
+        model.saveUsername(userId.getText());
         if(model.getObsLoggedInUser()!=null){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/App.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/MainView.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));

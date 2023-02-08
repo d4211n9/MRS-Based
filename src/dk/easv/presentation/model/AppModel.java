@@ -19,6 +19,8 @@ public class AppModel {
 
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
 
+    private String username;
+
     public void loadUsers(){
         obsUsers.clear();
         obsUsers.addAll(logic.getAllUsers());
@@ -77,5 +79,15 @@ public class AppModel {
             return false;
         else
             return true;
+    }
+
+
+    public String getUsername()
+    {
+        return username;
+    }
+
+    public void saveUsername(String name) {
+        username=name;
     }
 }
