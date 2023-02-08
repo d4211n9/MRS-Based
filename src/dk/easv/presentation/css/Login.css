@@ -1,0 +1,39 @@
+#vbMain {
+    -fx-background-color: #191717;
+}
+
+Label {
+    -fx-text-fill: #E6086E;
+}
+
+#lblLogin {
+    -fx-font-size: 25px;
+}
+
+TextField, #pwfPassword {
+    -fx-text-fill: #191717;
+    -fx-background-radius: 10px;
+    -fx-background-color: #ECECEC;
+    -fx-font-size: 15px;
+    -fx-padding: 6px 10px 6px 10px;
+}
+
+Button {
+    -fx-background-radius: 10px;
+    -fx-background-color: #E6086E;
+}
+
+#lblBtnLogin {
+    -fx-effect: dropshadow(gaussian , #191717 , 10 , 0.0 , 1 , 1);
+    -fx-font-size: 15px;
+    -fx-text-fill: #ECECEC;
+}
+
+#lblNoAccount {
+    -fx-font-size: 15px;
+    -fx-text-fill: #ECECEC;
+}
+
+#lblSignUp {
+    -fx-font-size: 15px;
+}
