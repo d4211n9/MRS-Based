@@ -9,7 +9,7 @@ import javafx.scene.control.ListView;
 import java.net.URL;
 import java.util.*;
 
-public class AppController implements Initializable {
+public class AppController extends BaseController implements Initializable {
     @FXML
     private ListView<User> lvUsers;
     @FXML
@@ -21,8 +21,6 @@ public class AppController implements Initializable {
     @FXML
     private ListView<TopMovie> lvTopFromSimilar;
 
-
-    private AppModel model;
     private long timerStartMillis = 0;
     private String timerMsg = "";
 
@@ -41,7 +39,7 @@ public class AppController implements Initializable {
     }
 
     public void setModel(AppModel model) {
-        this.model = model;
+        super.setModel(model);
         lvUsers.setItems(model.getObsUsers());
         lvTopForUser.setItems(model.getObsTopMovieSeen());
         lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());

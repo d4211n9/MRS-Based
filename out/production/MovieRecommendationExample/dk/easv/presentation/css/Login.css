@@ -10,7 +10,7 @@ Label {
     -fx-font-size: 25px;
 }
 
-TextField, #pwfPassword {
+TextField, PasswordField {
     -fx-text-fill: #191717;
     -fx-background-radius: 10px;
     -fx-background-color: #ECECEC;

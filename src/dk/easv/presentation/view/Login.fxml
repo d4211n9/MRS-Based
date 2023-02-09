@@ -13,11 +13,11 @@
       <Label id="lblLogin" maxHeight="-Infinity" maxWidth="-Infinity" text="Login" />
       <TextField id="txtfUsername" fx:id="userId" alignment="CENTER" maxWidth="-Infinity" minWidth="100.0" prefWidth="300.0" promptText="username" text="Georgi Facello" />
       <PasswordField id="pwfPassword" fx:id="passwordField" alignment="CENTER" maxWidth="-Infinity" minWidth="100.0" prefWidth="300.0" promptText="password" />
-      <Button id="btnLogin" maxWidth="-Infinity" minWidth="60.0" mnemonicParsing="false" onAction="#logIn" prefWidth="100.0">
+      <Button id="btnLogin" maxWidth="-Infinity" minWidth="60.0" mnemonicParsing="false" onAction="#logIn" onKeyPressed="#onEnterPressed" prefWidth="100.0">
          <graphic>
             <Label id="lblBtnLogin" maxHeight="-Infinity" onDragDetected="#logIn" text="Login" />
          </graphic></Button>
-      <FlowPane id="fpSignUp" alignment="TOP_CENTER" columnHalignment="CENTER">
+      <FlowPane id="fpSignUp" alignment="TOP_CENTER" columnHalignment="CENTER" onMouseClicked="#signUp">
          <children>
             <Label id="lblNoAccount" maxHeight="-Infinity" maxWidth="-Infinity" text="Don't have an account? " />
             <Label id="lblSignUp" maxHeight="-Infinity" maxWidth="-Infinity" text="Sign up here." />
