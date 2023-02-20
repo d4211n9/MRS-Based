@@ -1,6 +1,5 @@
 package dk.easv.presentation.controller;
 
-import dk.easv.entities.User;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,9 +38,10 @@ public class LogInController implements Initializable {
             stage.setScene(new Scene(root));
             stage.setTitle("Movie Recommendation System 0.01 Beta");
             stage.show();
+            stage.setMaximized(true);
             AppController controller = loader.getController();
 
-            controller.setModel(model);
+            controller.setUpUi(model);
 
 
         } catch (IOException e) {

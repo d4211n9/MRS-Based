@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+.root
+{
+    -fx-background-color: transparent;
+}
+.mainBackground
+{
+    -fx-background-color: #191717;
+    -fx-font-family: 'Shrikhand', cursive;
+}
+
+.pinkBackground
+{
+    -fx-background-color: #E6086E;
+    -fx-font-family: 'Shrikhand', cursive;
+}
+
+.flow-pane
+{
+    -fx-background-color: #191717;
+    -fx-font-family: 'Shrikhand', cursive;
+}
+
+.scroll-pane
+{
+    -fx-background-color: transparent;
+}
+
+.userGrid
+{
+    -fx-background-color: #E6086E;
+    -fx-background-radius: 10, 10, 10, 10;
+}
+
+.Vbox
+{
+    -fx-background-color: transparent;
+}
+
+.label
+{
+    -fx-text-fill: #ECECEC;
+}
+
+.button
+{
+    -fx-background-color: transparent;
+    -fx-text-fill: #ECECEC;
+    -fx-background-radius: 10px;
+}
+
+.selectedButton
+{
+    -fx-background-radius: 10px;
+    -fx-background-color: #ECECEC;
+    -fx-text-fill: #E6086E;
+}
+.titleLable
+{
+    -fx-text-fill: #ECECEC;
+    -fx-font-size: 15;
+}
