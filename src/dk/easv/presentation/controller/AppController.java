@@ -115,7 +115,19 @@ public class AppController implements Initializable {
         {
             fpDisplay.getChildren().remove(v);
         }
+        resetMoviesList();
     }
+
+    private void resetMoviesList()
+    {
+        Iterator<VBox> itr = movies.iterator();
+        while (itr.hasNext())
+        {
+            VBox i =itr.next();
+            itr.remove();
+        }
+    }
+
     private void resetButtons()
     {
         for (Button b: buttons)
@@ -126,6 +138,7 @@ public class AppController implements Initializable {
             }
         }
     }
+
 
     public void handelGetAllMovies(ActionEvent event)
     {
