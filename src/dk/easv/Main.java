@@ -1,5 +1,7 @@
 package dk.easv;
 
+import dk.easv.presentation.controller.BaseController;
+import dk.easv.presentation.model.AppModel;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +12,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("presentation/view/Login.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("presentation/view/Login.fxml"));
+        Parent root = loader.load();
+        ((BaseController) loader.getController()).setModel(new AppModel());
+
         primaryStage.setTitle("Movie Recommendation System 0.01 Beta");
         // primaryStage.setFullScreen(true);
         primaryStage.setScene(new Scene(root));

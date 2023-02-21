@@ -18,8 +18,7 @@ import java.io.File;
 import java.net.URL;
 import java.util.*;
 
-public class AppController implements Initializable {
-
+public class AppController extends BaseController implements Initializable {
     ArrayList<Button> buttons = new ArrayList<>();
 
     ArrayList<VBox> movies = new ArrayList<>();
@@ -63,14 +62,11 @@ public class AppController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        buttons.add(btnHome);
-        buttons.add(btnAllMovies);
-        buttons.add(btnRatings);
-        buttons.add(btnMyratings);
+
     }
 
-    public void setUpUi(AppModel model) {
-        this.model = model;
+    public void setModel(AppModel model) {
+        super.setModel(model);
         lblUserName.setText(model.getUsername());
 
         startTimer("Load users");
