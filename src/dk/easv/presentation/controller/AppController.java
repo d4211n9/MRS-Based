@@ -61,7 +61,12 @@ public class AppController extends BaseController implements Initializable {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        buttons.add(btnHome);
+        buttons.add(btnAllMovies);
+        buttons.add(btnMyratings);
+        buttons.add(btnRatings);
 
     }
 
@@ -70,19 +75,19 @@ public class AppController extends BaseController implements Initializable {
         lblUserName.setText(model.getUsername());
 
         startTimer("Load users");
-        model.loadUsers();
+        getModel().loadUsers();
         stopTimer();
 
 
-        model.loadData(model.getObsLoggedInUser());
-        ObservableList<Movie> movieList = model.getObsTopMovieNotSeen();
+        getModel().loadData(getModel().getObsLoggedInUser());
+        ObservableList<Movie> movieList = getModel().getObsTopMovieNotSeen();
         buildHome();
     }
 
     private void buildHome()
     {
-        for (TopMovie m: model.getObsTopMoviesSimilarUsers()) {
-            String titleAndRating = m.getTitle() + ", " + String.format("%.2f",m.getAverageRating());
+        for (TopMovie m: getModel().getObsTopMoviesSimilarUsers()) {
+            String titleAndRating = m.getTitle() + "\n" + String.format("%.2f",m.getAverageRating());
 
             VBox newCard = createMovieVbox(titleAndRating);
             fpDisplay.getChildren().addAll(newCard);
@@ -140,9 +145,9 @@ public class AppController extends BaseController implements Initializable {
     {
         resetFlowPane();
         resetButtons();
-        for (Movie m: model.getObsTopMovieNotSeen())
+        for (Movie m: getModel().getObsTopMovieNotSeen())
         {
-            String movie = m.getTitle() + ", " + String.format("%.2f",m.getAverageRating());
+            String movie = m.getTitle() + "\n" + String.format("%.2f",m.getAverageRating());
             fpDisplay.getChildren().add(createMovieVbox(movie));
         }
         btnAllMovies.getStyleClass().add("selectedButton");
@@ -159,9 +164,9 @@ public class AppController extends BaseController implements Initializable {
     {
         resetFlowPane();
         resetButtons();
-        for (Movie m:model.getObsTopMovieSeen())
+        for (Movie m:getModel().getObsTopMovieSeen())
         {
-            String movie = m.getTitle() + ", " + String.format("%.2f",m.getAverageRating());
+            String movie = m.getTitle() + "\n" + String.format("%.2f",m.getAverageRating());
             fpDisplay.getChildren().add(createMovieVbox(movie));
         }
         lblTitle.setText("My Ratings:");
@@ -172,9 +177,9 @@ public class AppController extends BaseController implements Initializable {
     {
         resetFlowPane();
         resetButtons();
-        for (Movie m: model.getObsTopMovieSeen())
+        for (Movie m: getModel().getObsTopMovieSeen())
         {
-            String movie = m.getTitle() + ", " + String.format("%.2f",m.getAverageRating());
+            String movie = m.getTitle() + "\n" + String.format("%.2f",m.getAverageRating());
             fpDisplay.getChildren().add(createMovieVbox(movie));
         }
         lblTitle.setText("Top Rated:");

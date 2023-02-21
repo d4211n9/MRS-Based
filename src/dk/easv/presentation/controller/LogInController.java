@@ -22,7 +22,7 @@ import java.net.URL;
 import java.security.Key;
 import java.util.ResourceBundle;
 
-public class LogInController implements Initializable {
+public class LogInController extends BaseController implements Initializable {
     @FXML private PasswordField passwordField;
     @FXML private TextField userId;
     private AppModel model;
@@ -42,12 +42,13 @@ public class LogInController implements Initializable {
         getModel().saveUsername(userId.getText());
         if(getModel().getObsLoggedInUser()!=null){
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/App.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/MainView.fxml"));
                 Parent root = loader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));
                 stage.setTitle("Movie Recommendation System 0.01 Beta");
                 stage.show();
+                stage.setMaximized(true);
                 AppController controller = loader.getController();
 
                 controller.setModel(getModel());

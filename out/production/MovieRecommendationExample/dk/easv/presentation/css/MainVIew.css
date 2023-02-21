@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 .root
 {
-    -fx-background-color: transparent;
+    -fx-background-color: #191717;
 }
 .mainBackground
 {
@@ -59,4 +59,9 @@
 {
     -fx-text-fill: #ECECEC;
     -fx-font-size: 15;
+}
+
+.imageView
+{
+    -fx-image-radius: 10;
 }

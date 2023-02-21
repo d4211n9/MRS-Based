@@ -16,7 +16,7 @@
    <left>
       <AnchorPane styleClass="pinkBackground" BorderPane.alignment="CENTER">
          <children>
-            <GridPane layoutY="141.0" prefHeight="106.0" prefWidth="122.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <GridPane layoutY="141.0" prefHeight="106.0" prefWidth="122.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
               <columnConstraints>
                 <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
@@ -73,10 +73,13 @@
                   <ImageView fx:id="ivUserAvatar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
                </children>
             </GridPane>
-            <Label fx:id="lblTitle" layoutX="6.0" layoutY="107.0" prefHeight="18.0" prefWidth="125.0" text="Label" AnchorPane.leftAnchor="6.000000000000028" AnchorPane.rightAnchor="346.0" />
-            <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="121.0" prefHeight="268.0" prefWidth="476.0" styleClass="flow-pane" stylesheets="@../css/MainVIew.css" vbarPolicy="NEVER" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="132.0">
+            <Label fx:id="lblTitle" layoutX="6.0" layoutY="107.0" prefHeight="18.0" prefWidth="125.0" text="Label" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="242.00000000000003" />
+            <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="121.0" prefHeight="268.0" prefWidth="476.0" styleClass="flow-pane" stylesheets="@../css/MainVIew.css" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="132.0">
                <content>
-                  <FlowPane fx:id="fpDisplay" prefWrapLength="1440" styleClass="flow-pane" />
+                  <FlowPane fx:id="fpDisplay" prefWrapLength="1350" styleClass="flow-pane">
+                     <padding>
+                        <Insets left="91.0" right="25.0" />
+                     </padding></FlowPane>
                </content>
             </ScrollPane>
          </children>
