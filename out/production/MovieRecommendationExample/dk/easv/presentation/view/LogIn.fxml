@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox id="vbMain" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="16.0" stylesheets="@../css/Login.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.LogInController">
+<VBox id="vbMain" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="16.0" stylesheets="@../css/Login.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" onKeyPressed="#onEnterPressed" fx:controller="dk.easv.presentation.controller.LogInController">
    <children>
       <Label id="lblLogin" maxHeight="-Infinity" maxWidth="-Infinity" text="Login" />
       <TextField id="txtfUsername" fx:id="userId" alignment="CENTER" maxWidth="-Infinity" minWidth="100.0" prefWidth="300.0" promptText="username" text="Georgi Facello" />
       <PasswordField id="pwfPassword" fx:id="passwordField" alignment="CENTER" maxWidth="-Infinity" minWidth="100.0" prefWidth="300.0" promptText="password" />
-      <Button id="btnLogin" maxWidth="-Infinity" minWidth="60.0" mnemonicParsing="false" onAction="#logIn" onKeyPressed="#onEnterPressed" prefWidth="100.0">
+      <Button id="btnLogin" maxWidth="-Infinity" minWidth="60.0" mnemonicParsing="false" onAction="#logIn" prefWidth="100.0">
          <graphic>
             <Label id="lblBtnLogin" maxHeight="-Infinity" onDragDetected="#logIn" text="Login" />
          </graphic></Button>
