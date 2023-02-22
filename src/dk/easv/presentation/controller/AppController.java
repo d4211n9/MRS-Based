@@ -73,6 +73,13 @@ public class AppController extends BaseController implements Initializable {
     public void setModel(AppModel model) {
         super.setModel(model);
         lblUserName.setText(model.getUsername());
+        File file = new File("data/logo.png");
+        Image image = new Image(file.toURI().toString());
+        File pfFile = new File("data/avatar.png");
+        Image PfImage = new Image(pfFile.toURI().toString());
+
+        ivlogo.setImage(image);
+        ivUserAvatar.setImage(PfImage);
 
         startTimer("Load users");
         getModel().loadUsers();
@@ -86,6 +93,7 @@ public class AppController extends BaseController implements Initializable {
 
     private void buildHome()
     {
+        int timesRun = 0;
         for (TopMovie m: getModel().getObsTopMoviesSimilarUsers()) {
             String titleAndRating = m.getTitle() + "\n" + String.format("%.2f",m.getAverageRating());
 
@@ -93,6 +101,11 @@ public class AppController extends BaseController implements Initializable {
             fpDisplay.getChildren().addAll(newCard);
             fpDisplay.setVgap(10);
             fpDisplay.setHgap(10);
+            timesRun++;
+            if (timesRun == 82)
+            {
+                break;
+            }
         }
         resetButtons();
         lblTitle.setText("Rrecommended:");
@@ -143,13 +156,20 @@ public class AppController extends BaseController implements Initializable {
 
     public void handelGetAllMovies(ActionEvent event)
     {
+        int timesRun = 0;
         resetFlowPane();
         resetButtons();
-        for (Movie m: getModel().getObsTopMovieNotSeen())
+       for (Movie m: getModel().getObsTopMovieNotSeen())
         {
-            String movie = m.getTitle() + "\n" + String.format("%.2f",m.getAverageRating());
+           String movie = m.getTitle() + "\n" + String.format("%.2f",m.getAverageRating());
             fpDisplay.getChildren().add(createMovieVbox(movie));
+            timesRun++;
+            if (timesRun == 82)
+            {
+                break;
+            }
         }
+       lblTitle.setText("All Movies:");
         btnAllMovies.getStyleClass().add("selectedButton");
         btnHome.getStyleClass().add("lblSelectedButton");
     }

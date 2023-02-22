@@ -60,8 +60,3 @@
     -fx-text-fill: #ECECEC;
     -fx-font-size: 15;
 }
-
-.imageView
-{
-    -fx-image-radius: 10;
-}

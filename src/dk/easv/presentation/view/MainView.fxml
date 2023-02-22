@@ -14,9 +14,9 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="mainBackground" stylesheets="@../css/MainVIew.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <left>
-      <AnchorPane styleClass="pinkBackground" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="98.0" styleClass="pinkBackground" BorderPane.alignment="CENTER">
          <children>
-            <GridPane layoutY="141.0" prefHeight="106.0" prefWidth="122.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <GridPane layoutX="7.0" layoutY="141.0" prefHeight="106.0" prefWidth="124.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="11.0">
               <columnConstraints>
                 <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
@@ -49,7 +49,7 @@
                   </Button>
                </children>
             </GridPane>
-            <ImageView fx:id="ivlogo" fitHeight="73.0" fitWidth="87.0" layoutX="18.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="269.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="32.0" />
+            <ImageView fx:id="ivlogo" fitHeight="73.0" fitWidth="87.0" layoutX="28.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="288.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="27.400000000000006" AnchorPane.topAnchor="39.0" />
          </children>
       </AnchorPane>
    </left>

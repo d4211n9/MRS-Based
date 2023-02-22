@@ -7,6 +7,8 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.List;
+
 public class AppModel {
 
     LogicManager logic = new LogicManager();
@@ -90,6 +92,5 @@ public class AppModel {
     public void saveUsername(String name) {
         username=name;
     }
-
 
 }
